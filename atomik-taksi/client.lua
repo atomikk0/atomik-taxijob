@@ -68,9 +68,6 @@ AddEventHandler("atomik-taxi:arackoy", function()
 end)
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    if not Player then return end     
     if JobInfo.name == "taxi" and PlayerJob.name ~= "taxi" then
         if JobInfo.onduty then
             TriggerServerEvent("QBCore:ToggleDuty")

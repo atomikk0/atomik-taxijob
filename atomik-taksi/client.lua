@@ -68,13 +68,6 @@ AddEventHandler("atomik-taxi:arackoy", function()
 end)
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
-    if JobInfo.name == "taxi" and PlayerJob.name ~= "taxi" then
-        if JobInfo.onduty then
-            TriggerServerEvent("QBCore:ToggleDuty")
-            onDuty = true
-        end
-    end
-
     PlayerJob = JobInfo.name
 end)
 

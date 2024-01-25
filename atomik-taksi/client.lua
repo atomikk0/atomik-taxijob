@@ -1,11 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-Citizen.CreateThread(function()
-    while QBCore == nil do
-        Citizen.Wait(250) -- Saniye Bekletme
-    end
- end)
-
 
 function MadenMenu(data)
 
